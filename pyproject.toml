@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "awx-infisical-credential"
+version = "0.1.0"
+description = "AWX credential plugin: Infisical Secret Lookup"
+authors = [{ name = "you", email = "you@example.com" }]
+license = { text = "MIT" }
+requires-python = ">=3.9"
+dependencies = ["requests>=2.31.0"]
+
+[project.entry-points."awx.credential_plugins"]
+infisical = "awx_infisical_credential.plugin:plugin"
